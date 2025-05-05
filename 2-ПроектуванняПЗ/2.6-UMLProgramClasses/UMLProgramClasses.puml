@@ -1,0 +1,17 @@
+@startuml
+class User {
+  +user_id : int
+  #username : string
+  -password : string
+  +login()
+  +changePassword()
+}
+
+class Order {
+  +order_id : int
+  +createOrder()
+  +cancelOrder()
+}
+
+User "1" --> "0..*" Order
+@enduml
